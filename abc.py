@@ -1,0 +1,1 @@
+class GetJwt(TemplateView):    @method_decorator(ensure_csrf_cookie)    def get(self, request):        if request.user.is_authenticated:            message = helpers.get_permissions(request.user.profile)
